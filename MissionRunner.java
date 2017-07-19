@@ -5,7 +5,7 @@ import battleship.games.*;
 
 public class MissionRunner {
     
-    public static Class<? extends Ship> PLAYER_CLASS = esi17.vkannan3.KannanShip.class;
+    public static Class<? extends Ship> PLAYER_CLASS = battleship.ships.DummyShip.class;
     
     public static void main(String[] args) {
         
@@ -42,6 +42,8 @@ public class MissionRunner {
                 return new Mission01(pc);
             case 2:
                 return new Mission02(pc);
+            case 3:
+                return new Mission03(pc);
             default:
                 return null;
         }

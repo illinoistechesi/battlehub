@@ -26,7 +26,8 @@ public class Main {
         
         List<Class<? extends Ship>> c = new ArrayList<Class<? extends Ship>>();
         
-        c.add(battleship.ships.CustomShip.class);
+        //c.add(battleship.ships.CustomShip.class);
+        c.add(esi17.vkannan3.KannanShip.class);
         c.add(battleship.ships.DummyShip.class);
         c.add(battleship.ships.DummyShip.class);
         
