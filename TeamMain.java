@@ -16,8 +16,8 @@ public class TeamMain {
         List<TeamBattle.Loyalty> c = new ArrayList<TeamBattle.Loyalty>();
         
         
-        c.add(new TeamBattle.Loyalty(esi17.cs.RandomShip.class, "Team A"));
-        //c.add(new TeamBattle.Loyalty(battleship.ships.DummyShip.class, "Team A"));
+        //c.add(new TeamBattle.Loyalty(esi17.cs.RandomShip.class, "Team A"));
+        c.add(new TeamBattle.Loyalty(battleship.ships.DummyShip.class, "Team A"));
         c.add(new TeamBattle.Loyalty(battleship.ships.DummyShip.class, "Team A"));
         c.add(new TeamBattle.Loyalty(battleship.ships.DummyShip.class, "Team A"));
         c.add(new TeamBattle.Loyalty(battleship.ships.CustomShip.class, "Team B"));
