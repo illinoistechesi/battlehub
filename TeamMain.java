@@ -9,7 +9,7 @@ public class TeamMain {
     public static void main(String[] args) {
         
         int seed = 42;
-        if (args.length >= 2) {
+        if (args.length >= 1) {
             seed = Integer.parseInt(args[0]);
         }
         
