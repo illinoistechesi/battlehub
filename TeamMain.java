@@ -8,21 +8,24 @@ public class TeamMain {
     
     public static void main(String[] args) {
         
-        int seed = 42;
+        int seed = (int) Math.floor(Math.random() * 100);
         if (args.length >= 1) {
             seed = Integer.parseInt(args[0]);
         }
         
+        System.out.println("Seed: " + seed);
+        
         List<TeamBattle.Loyalty> c = new ArrayList<TeamBattle.Loyalty>();
         
+        // Team A
+        c.add(new TeamBattle.Loyalty(battleship.ships.DummyShip.class, "Team B"));
+        c.add(new TeamBattle.Loyalty(battleship.ships.DummyShip.class, "Team B"));
+        c.add(new TeamBattle.Loyalty(battleship.ships.DummyShip.class, "Team B"));
         
-        //c.add(new TeamBattle.Loyalty(esi17.cs.RandomShip.class, "Team A"));
-        c.add(new TeamBattle.Loyalty(battleship.ships.DummyShip.class, "Team A"));
-        c.add(new TeamBattle.Loyalty(battleship.ships.DummyShip.class, "Team A"));
-        c.add(new TeamBattle.Loyalty(battleship.ships.DummyShip.class, "Team A"));
-        c.add(new TeamBattle.Loyalty(battleship.ships.CustomShip.class, "Team B"));
-        c.add(new TeamBattle.Loyalty(battleship.ships.CustomShip.class, "Team B"));
-        c.add(new TeamBattle.Loyalty(battleship.ships.CustomShip.class, "Team B"));
+        // Team B
+        c.add(new TeamBattle.Loyalty(battleship.ships.DummyShip.class, "Team B"));
+        c.add(new TeamBattle.Loyalty(battleship.ships.DummyShip.class, "Team B"));
+        c.add(new TeamBattle.Loyalty(battleship.ships.DummyShip.class, "Team B"));
         
         TeamBattle battle = new TeamBattle(c, seed);
         
