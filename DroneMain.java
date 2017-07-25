@@ -29,7 +29,10 @@ public class DroneMain {
         c.add(new Spawn(battleship.ships.DummyShip.class, "Team B"));
         c.add(new Spawn(battleship.ships.DummyShip.class, "Team B"));
         
-        DroneBattle battle = new DroneBattle(c, seed);
+        // Drone
+        Class<? extends Ship> drone = battleship.ships.DroneShip.class;
+        
+        DroneBattle battle = new DroneBattle(c, drone, seed);
         
         battle.setMaxTurns(100);
         battle.setArenaFile("files/drone-arena.txt");
