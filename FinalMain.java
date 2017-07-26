@@ -42,7 +42,7 @@ public class FinalMain {
             {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '}, // 5
             {' ', 'V', ' ', ' ', '#', ' ', ' ', '%', ' ', ' ', '#', ' ', ' ', 'H', ' '}, // 6
             {' ', 'U', ' ', ' ', '@', ' ', '%', ' ', '%', ' ', '@', ' ', ' ', 'I', ' '}, // 7
-            {' ', 'T', ' ', ' ', '#', ' ', ' ', '%', ' ', ' ', '#', ' ', ' ', 'J', ' '}, // 8            {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+            {' ', 'T', ' ', ' ', '#', ' ', ' ', '%', ' ', ' ', '#', ' ', ' ', 'J', ' '}, // 8
             {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '}, // 9
             {' ', ' ', ' ', '#', ' ', ' ', '#', '@', '#', ' ', ' ', '#', ' ', ' ', ' '}, // 10
             {' ', ' ', ' ', ' ', '#', ' ', ' ', ' ', ' ', ' ', '#', ' ', ' ', ' ', ' '}, // 11
@@ -58,7 +58,7 @@ public class FinalMain {
         shipMap.put('@', esi17.vkannan3.QueenShip.class);
         shipMap.put('#', esi17.vkannan3.HiveShip.class);
         
-        shipMap.put('A', esi17.Nickthegreat.MoistNoodle.class);
+        /*shipMap.put('A', esi17.Nickthegreat.MoistNoodle.class);
         shipMap.put('B', esi17.ssoto7713.SotoShip.class);
         shipMap.put('C', esi17.slee1713.MakeAmericaGreatAgain.class);
         shipMap.put('D', esi17.vsandrade99.TheBlackPearl.class);
@@ -82,7 +82,33 @@ public class FinalMain {
         shipMap.put('V', esi17.aquafreeze.AquafreezeShip.class);
         shipMap.put('W', esi17.Dolphin20.Dolphin20Ship.class);
         shipMap.put('X', esi17.Kahsel.KahselShip.class);
-        shipMap.put('Y', esi17.mruiz9.guppy.class);
+        shipMap.put('Y', esi17.mruiz9.guppy.class);*/
+        
+        shipMap.put('A', battleship.ships.DummyShip.class);
+        shipMap.put('B', battleship.ships.DummyShip.class);
+        shipMap.put('C', battleship.ships.DummyShip.class);
+        shipMap.put('D', battleship.ships.DummyShip.class);
+        shipMap.put('E', battleship.ships.DummyShip.class);
+        shipMap.put('F', battleship.ships.DummyShip.class);
+        shipMap.put('G', battleship.ships.DummyShip.class);
+        shipMap.put('H', battleship.ships.DummyShip.class);
+        shipMap.put('I', battleship.ships.DummyShip.class);
+        shipMap.put('J', battleship.ships.DummyShip.class);
+        shipMap.put('K', battleship.ships.DummyShip.class);
+        shipMap.put('L', battleship.ships.DummyShip.class);
+        shipMap.put('M', battleship.ships.DummyShip.class);
+        shipMap.put('N', battleship.ships.DummyShip.class);
+        shipMap.put('O', battleship.ships.DummyShip.class);
+        shipMap.put('P', battleship.ships.DummyShip.class);
+        shipMap.put('Q', battleship.ships.DummyShip.class);
+        shipMap.put('R', battleship.ships.DummyShip.class);
+        shipMap.put('S', battleship.ships.DummyShip.class);
+        shipMap.put('T', battleship.ships.DummyShip.class);
+        shipMap.put('U', battleship.ships.DummyShip.class);
+        shipMap.put('V', battleship.ships.DummyShip.class);
+        shipMap.put('W', battleship.ships.DummyShip.class);
+        shipMap.put('X', battleship.ships.DummyShip.class);
+        shipMap.put('Y', battleship.ships.DummyShip.class);
         
         for (Character key : shipMap.keySet()) {
             if (key.equals('@') || key.equals('#') || key.equals('%')) {
