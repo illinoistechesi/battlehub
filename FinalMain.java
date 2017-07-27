@@ -55,8 +55,8 @@ public class FinalMain {
         Map<Character, String> teamMap = new HashMap<Character, String>();
         
         shipMap.put('%', battleship.ships.DummyShip.class);
-        shipMap.put('@', esi17.vkannan3.QueenShip.class);
-        shipMap.put('#', esi17.vkannan3.HiveShip.class);
+        shipMap.put('@', battleship.ships.QueenShip.class);
+        shipMap.put('#', battleship.ships.HiveShip.class);
         
         /*shipMap.put('A', esi17.Nickthegreat.MoistNoodle.class);
         shipMap.put('B', esi17.ssoto7713.SotoShip.class);
