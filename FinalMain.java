@@ -19,6 +19,7 @@ public class FinalMain {
         
         String instructorTeam = "Instructors";
         String studentTeam = "Students";
+        System.out.println("Seed: " + seed);
         
         CustomBattle battle = initBattle(seed, instructorTeam, studentTeam);
         
@@ -34,9 +35,6 @@ public class FinalMain {
     }
     
     public static CustomBattle initBattle(int seed, String instructorTeam, String studentTeam) {
-        
-        System.out.println("Seed: " + seed);
-        
         char[][] layout = {
           //  0    1    2    3    4    5    6    7    8    9   10   11   12   13   14
             {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '}, // 0
@@ -46,8 +44,8 @@ public class FinalMain {
             {' ', ' ', ' ', '#', ' ', ' ', '#', '@', '#', ' ', ' ', '#', ' ', ' ', ' '}, // 4
             {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '}, // 5
             {' ', 'V', ' ', ' ', '#', ' ', ' ', '^', ' ', ' ', '#', ' ', ' ', 'H', ' '}, // 6
-            {' ', 'U', ' ', ' ', '@', ' ', '%', ' ', '%', ' ', '@', ' ', ' ', 'I', ' '}, // 7
-            {' ', 'T', ' ', ' ', '#', ' ', ' ', '&', ' ', ' ', '#', ' ', ' ', 'J', ' '}, // 8
+            {' ', 'U', ' ', ' ', '@', ' ', '<', ' ', '>', ' ', '@', ' ', ' ', 'I', ' '}, // 7
+            {' ', 'T', ' ', ' ', '#', ' ', ' ', '*', ' ', ' ', '#', ' ', ' ', 'J', ' '}, // 8
             {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '}, // 9
             {' ', ' ', ' ', '#', ' ', ' ', '#', '@', '#', ' ', ' ', '#', ' ', ' ', ' '}, // 10
             {' ', ' ', ' ', ' ', '#', ' ', ' ', ' ', ' ', ' ', '#', ' ', ' ', ' ', ' '}, // 11
@@ -59,12 +57,14 @@ public class FinalMain {
         Map<Character, Class<? extends Ship>> shipMap = new HashMap<Character, Class<? extends Ship>>();
         Map<Character, String> teamMap = new HashMap<Character, String>();
         
-        shipMap.put('%', battleship.ships.DummyShip.class);
-        teamMap.put('%', instructorTeam);
         shipMap.put('^', esi17.hli109.DavyJonesLocker.class);
         teamMap.put('^', instructorTeam);
-        shipMap.put('&', esi17.vkannan3.GeneticShip.class);
-        teamMap.put('&', instructorTeam);
+        shipMap.put('<', battleship.ships.DummyShip.class);
+        teamMap.put('<', instructorTeam);
+        shipMap.put('>', battleship.ships.DummyShip.class);
+        teamMap.put('>', instructorTeam);
+        shipMap.put('*', esi17.vkannan3.GeneticShip.class);
+        teamMap.put('*', instructorTeam);
         shipMap.put('@', battleship.ships.QueenShip.class);
         teamMap.put('@', instructorTeam);
         shipMap.put('#', battleship.ships.HiveShip.class);
