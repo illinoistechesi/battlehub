@@ -45,7 +45,7 @@ public class FinalMain {
             {' ', ' ', ' ', ' ', '#', ' ', ' ', '#', ' ', ' ', '#', ' ', ' ', ' ', ' '}, // 3
             {' ', ' ', ' ', '#', ' ', ' ', '#', '@', '#', ' ', ' ', '#', ' ', ' ', ' '}, // 4
             {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '}, // 5
-            {' ', 'V', ' ', ' ', '#', ' ', ' ', '%', ' ', ' ', '#', ' ', ' ', 'H', ' '}, // 6
+            {' ', 'V', ' ', ' ', '#', ' ', ' ', '^', ' ', ' ', '#', ' ', ' ', 'H', ' '}, // 6
             {' ', 'U', ' ', ' ', '@', ' ', '%', ' ', '%', ' ', '@', ' ', ' ', 'I', ' '}, // 7
             {' ', 'T', ' ', ' ', '#', ' ', ' ', '&', ' ', ' ', '#', ' ', ' ', 'J', ' '}, // 8
             {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '}, // 9
@@ -61,6 +61,8 @@ public class FinalMain {
         
         shipMap.put('%', battleship.ships.DummyShip.class);
         teamMap.put('%', instructorTeam);
+        shipMap.put('^', esi17.hli109.DavyJonesLocker.class);
+        teamMap.put('^', instructorTeam);
         shipMap.put('&', esi17.vkannan3.GeneticShip.class);
         teamMap.put('&', instructorTeam);
         shipMap.put('@', battleship.ships.QueenShip.class);
