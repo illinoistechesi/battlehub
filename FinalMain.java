@@ -4,6 +4,11 @@ import battleship.games.*;
 import battleship.ships.*;
 import java.util.*;
 
+/*
+ * INSTRUCTIONS
+ * $ javac battlehub/FinalMain.java
+ * $ java battlehub.FinalMain
+ */
 public class FinalMain {
     
     public static void main(String[] args) {
@@ -17,7 +22,7 @@ public class FinalMain {
         
         CustomBattle battle = initBattle(seed, instructorTeam, studentTeam);
         
-        battle.setCanPrint(true);
+        battle.setCanPrint(false);
         battle.setMaxTurns(100);
         battle.setArenaFile("files/final-arena.txt");
         battle.setTurnFile("files/final-turns.txt");
@@ -42,7 +47,7 @@ public class FinalMain {
             {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '}, // 5
             {' ', 'V', ' ', ' ', '#', ' ', ' ', '%', ' ', ' ', '#', ' ', ' ', 'H', ' '}, // 6
             {' ', 'U', ' ', ' ', '@', ' ', '%', ' ', '%', ' ', '@', ' ', ' ', 'I', ' '}, // 7
-            {' ', 'T', ' ', ' ', '#', ' ', ' ', '%', ' ', ' ', '#', ' ', ' ', 'J', ' '}, // 8
+            {' ', 'T', ' ', ' ', '#', ' ', ' ', '&', ' ', ' ', '#', ' ', ' ', 'J', ' '}, // 8
             {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '}, // 9
             {' ', ' ', ' ', '#', ' ', ' ', '#', '@', '#', ' ', ' ', '#', ' ', ' ', ' '}, // 10
             {' ', ' ', ' ', ' ', '#', ' ', ' ', ' ', ' ', ' ', '#', ' ', ' ', ' ', ' '}, // 11
@@ -55,10 +60,15 @@ public class FinalMain {
         Map<Character, String> teamMap = new HashMap<Character, String>();
         
         shipMap.put('%', battleship.ships.DummyShip.class);
+        teamMap.put('%', instructorTeam);
+        shipMap.put('&', esi17.vkannan3.GeneticShip.class);
+        teamMap.put('&', instructorTeam);
         shipMap.put('@', battleship.ships.QueenShip.class);
+        teamMap.put('@', instructorTeam);
         shipMap.put('#', battleship.ships.HiveShip.class);
+        teamMap.put('#', instructorTeam);
         
-        /*shipMap.put('A', esi17.Nickthegreat.MoistNoodle.class);
+        shipMap.put('A', esi17.Nickthegreat.MoistNoodle.class);
         shipMap.put('B', esi17.ssoto7713.SotoShip.class);
         shipMap.put('C', esi17.slee1713.MakeAmericaGreatAgain.class);
         shipMap.put('D', esi17.vsandrade99.TheBlackPearl.class);
@@ -82,9 +92,9 @@ public class FinalMain {
         shipMap.put('V', esi17.aquafreeze.AquafreezeShip.class);
         shipMap.put('W', esi17.Dolphin20.Dolphin20Ship.class);
         shipMap.put('X', esi17.Kahsel.KahselShip.class);
-        shipMap.put('Y', esi17.mruiz9.guppy.class);*/
+        shipMap.put('Y', esi17.mruiz9.guppy.class);
         
-        shipMap.put('A', battleship.ships.DummyShip.class);
+        /*shipMap.put('A', battleship.ships.DummyShip.class);
         shipMap.put('B', battleship.ships.DummyShip.class);
         shipMap.put('C', battleship.ships.DummyShip.class);
         shipMap.put('D', battleship.ships.DummyShip.class);
@@ -108,17 +118,17 @@ public class FinalMain {
         shipMap.put('V', battleship.ships.DummyShip.class);
         shipMap.put('W', battleship.ships.DummyShip.class);
         shipMap.put('X', battleship.ships.DummyShip.class);
-        shipMap.put('Y', battleship.ships.DummyShip.class);
+        shipMap.put('Y', battleship.ships.DummyShip.class);*/
         
         for (Character key : shipMap.keySet()) {
-            if (key.equals('@') || key.equals('#') || key.equals('%')) {
-                //System.out.println(key + " -> " + instructorTeam);
-                teamMap.put(key, instructorTeam);
-            } else{
-                //System.out.println(key + " -> " + studentTeam);
+            if (!teamMap.containsKey(key)) {
                 teamMap.put(key, studentTeam);
             }
         }
+        
+        /*for (Character key : shipMap.keySet()) {
+            System.out.println(shipMap.get(key) + " --> " + teamMap.get(key));
+        }*/
         
         List<Spawn> c = new ArrayList<Spawn>();
         
