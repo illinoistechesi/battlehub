@@ -45,7 +45,7 @@ public class FinalMain {
             {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '}, // 5
             {' ', 'V', ' ', ' ', '#', ' ', ' ', '^', ' ', ' ', '#', ' ', ' ', 'H', ' '}, // 6
             {' ', 'U', ' ', ' ', '@', ' ', '<', ' ', '>', ' ', '@', ' ', ' ', 'I', ' '}, // 7
-            {' ', 'T', ' ', ' ', '#', ' ', ' ', '*', ' ', ' ', '#', ' ', ' ', 'J', ' '}, // 8
+            {' ', 'T', ' ', ' ', '#', ' ', ' ', '&', ' ', ' ', '#', ' ', ' ', 'J', ' '}, // 8
             {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '}, // 9
             {' ', ' ', ' ', '#', ' ', ' ', '#', '@', '#', ' ', ' ', '#', ' ', ' ', ' '}, // 10
             {' ', ' ', ' ', ' ', '#', ' ', ' ', ' ', ' ', ' ', '#', ' ', ' ', ' ', ' '}, // 11
@@ -57,17 +57,21 @@ public class FinalMain {
         Map<Character, Class<? extends Ship>> shipMap = new HashMap<Character, Class<? extends Ship>>();
         Map<Character, String> teamMap = new HashMap<Character, String>();
         
-        shipMap.put('^', esi17.hli109.DavyJonesLocker.class);
-        teamMap.put('^', instructorTeam);
+        shipMap.put('^', battleship.ships.DummyShip.class);
+        //shipMap.put('^', esi17.hli109.DavyJonesLocker.class);
         shipMap.put('<', battleship.ships.DummyShip.class);
-        teamMap.put('<', instructorTeam);
         shipMap.put('>', battleship.ships.DummyShip.class);
-        teamMap.put('>', instructorTeam);
-        shipMap.put('*', esi17.vkannan3.GeneticShip.class);
-        teamMap.put('*', instructorTeam);
+        shipMap.put('%', battleship.ships.DummyShip.class);
+        shipMap.put('&', esi17.vkannan3.GeneticShip.class);
         shipMap.put('@', battleship.ships.QueenShip.class);
-        teamMap.put('@', instructorTeam);
         shipMap.put('#', battleship.ships.HiveShip.class);
+        
+        teamMap.put('^', instructorTeam);
+        teamMap.put('<', instructorTeam);
+        teamMap.put('>', instructorTeam);
+        teamMap.put('%', instructorTeam);
+        teamMap.put('&', instructorTeam);
+        teamMap.put('@', instructorTeam);
         teamMap.put('#', instructorTeam);
         
         shipMap.put('A', esi17.Nickthegreat.MoistNoodle.class);
