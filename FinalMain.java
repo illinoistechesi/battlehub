@@ -57,10 +57,10 @@ public class FinalMain {
         Map<Character, Class<? extends Ship>> shipMap = new HashMap<Character, Class<? extends Ship>>();
         Map<Character, String> teamMap = new HashMap<Character, String>();
         
-        shipMap.put('^', battleship.ships.DummyShip.class);
-        //shipMap.put('^', esi17.hli109.DavyJonesLocker.class);
-        shipMap.put('<', battleship.ships.DummyShip.class);
-        shipMap.put('>', battleship.ships.DummyShip.class);
+        //shipMap.put('^', battleship.ships.DummyShip.class);
+        shipMap.put('^', esi17.hli109.DavyJonesLocker.class);
+        shipMap.put('<', esi17.smallcpu.SmallcpuShip.class);
+        shipMap.put('>', esi17.DoomDawn.DoomShip.class);
         shipMap.put('%', battleship.ships.DummyShip.class);
         shipMap.put('&', esi17.vkannan3.GeneticShip.class);
         shipMap.put('@', battleship.ships.QueenShip.class);
